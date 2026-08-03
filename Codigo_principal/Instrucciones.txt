@@ -1,1 +1,25 @@
+# Instrucciones de Uso: solo_navegacion.py
+Este script requiere que el entorno de ROS y los sensores del robot ya estén publicando datos. No es un script standalone, forma parte del ecosistema del Hiwonder JetTank.
 
+# Requisitos previos:
+
+* Tener el archivo best.engine (motor TensorRT compilado) en la ruta: /home/hiwonder/jettank_ws/src/src/jettank_control/jettank_control/.
+* Tener ROS Melodic instalado y configurado en la Jetson Nano.
+* Tener el nodo del SLAM corriendo (mediante el ícono Iniciar SLAM).
+* Parámetros configurables:El código cuenta con una sección de configuración al inicio donde se pueden ajustar los parámetros de comportamiento sin necesidad de reescribir la lógica:
+
+  SCORE_MINIMO: Confianza mínima de la IA para aceptar una detección (Default: 0.45).
+  TIEMPO_ENFRIAMIENTO: Segundos de espera entre detecciones para evitar contar la misma planta dos veces (Default: 2.0).
+  Y_LIMIT_INF: Límite en píxeles (eje Y) para filtrar plantas lejanas (Default: 240).
+  ANGULO_OBJETIVO: Ángulo de giro en U empírico para compensar la inercia (Default: 175°).
+  Ejecución:En el robot, este script se lanza al presionar el ícono Arrancar Tesis en la pantalla táctil. Internamente, el sistema operativo ejecuta el siguiente comando:
+
+    source /opt/ros/melodic/setup.bashsource /home/hiwonder/jettank_ws/devel/setup.bashpython3 /home/hiwonder/Desktop/solo_navegacion.py
+# Flujo de operación:
+
+El script carga el motor de IA en la GPU (tarda ~5 segundos).
+Inicializa la ventana de la Interfaz Gráfica (Tkinter) en la pantalla.
+Espera a que la IMU, el LiDAR y la Odometría estén disponibles (Timeout 15s).
+Inicia el recorrido en "S": avanza por el carril 1 (cámara a 45° derecha), gira en U, avanza por el carril 2 (cámara a 45° izquierda), gira en U, y avanza por el carril 3.
+Al terminar, detiene los motores, centra la cámara, guarda la trayectoria (.png) y el mapa SLAM (.pgm) en el escritorio.
+Mantiene la interfaz abierta por 30 segundos para tomar evidencia fotográfica y luego cierra todo limpiamente.
