@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Arrancar Tesis
+Comment=Ejecuta el control de navegación y visión en campo
+Exec=bash -c "source /opt/ros/melodic/setup.bash; source /home/hiwonder/jettank_ws/devel/setup.bash; python3 /home/hiwonder/Desktop/solo_navegacion.py; exec bash"
+Icon=utilities-terminal
+Path=/home/hiwonder/Desktop
+Terminal=true
+Categories=Development;

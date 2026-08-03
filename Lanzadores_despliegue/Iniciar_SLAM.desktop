@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Iniciar SLAM
+Comment=Ejecuta el entorno base de ROS
+Exec=bash -ic 'rostune; roslaunch hiwonder_slam slam.launch; exec bash'
+Icon=utilities-terminal
+Terminal=true
+Type=Application
+Categories=Application;
