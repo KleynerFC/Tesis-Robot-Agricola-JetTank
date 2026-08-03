@@ -15,7 +15,7 @@ plataforma Hiwonder JetTank. Al realizar las pruebas de control, se evidenció
 que el mecanismo PTZ de la cámara solo posee servomotor electrónico en su 
 eje Pan (horizontal). El eje Tilt (vertical) no responde a comandos de ROS 
 y debe ajustarse manualmente por fricción mecánica antes de iniciar la misión.
-Gracias a esta validación, en el script final 'solo_navegacion.py' se 
+Gracias a esta validación, en el script final 'codigo_final.py' se 
 programó el movimiento automático de la cámara solo en el eje Pan (45° a la 
 derecha y 45° a la izquierda) para inspeccionar los lados del surco.
 
