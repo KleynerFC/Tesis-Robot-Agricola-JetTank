@@ -5,6 +5,7 @@ Este script se utiliza como herramienta de diagnóstico y validación de hardwar
 # Requisitos previos:
 
   * Tener el nodo del SLAM corriendo (mediante el ícono Iniciar SLAM).
+  * Tener el control joystick con pilas y encendido.
   * Conectar el dongle USB del joystick (gamepad) al robot.
   * Lanzar el nodo del joystick en una terminal:
       rosrun joy joy_node
