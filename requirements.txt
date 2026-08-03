@@ -1,1 +1,7 @@
-
+rospy
+numpy
+opencv-python
+pycuda
+tensorrt
+tkinter
+PyYAML
