@@ -3,7 +3,7 @@
 
 # Trabajo de Integración Curricular presentado para la obtención del título de Ingeniero en Electrónica y Automatización en la Universidad Estatal Península de Santa Elena (UPSE).
 
-Autor: Kleyner Fabricio Flores Cedeño
+Autor: Kleyner Fabricio Flores Cedeño.
 Tutor: Ing. Junior Figueroa, M.Sc.
 Año: 2026
 
