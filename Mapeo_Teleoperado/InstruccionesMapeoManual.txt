@@ -1,1 +1,29 @@
+# Instrucciones de Uso: mapeo_manual.py
 
+Este script se utiliza como herramienta de diagnóstico y validación de hardware. Su objetivo es demostrar que el sensor LiDAR y los encoders del robot están calibrados y funcionando correctamente, generando un mapa SLAM perfecto a velocidad de rastreo.
+
+# Requisitos previos:
+
+  * Tener el nodo del SLAM corriendo (mediante el ícono Iniciar SLAM).
+  * Conectar el dongle USB del joystick (gamepad) al robot.
+  * Lanzar el nodo del joystick en una terminal:
+      rosrun joy joy_node
+# Parámetros de seguridad:
+
+Para evitar que el robot derrape durante el mapeo manual, el código tiene un limitador de velocidad estricto:
+
+Velocidad lineal máxima: 0.05 m/s (5% de la capacidad del motor).
+Velocidad angular máxima: 0.3 rad/s.
+
+# Ejecución y finalización:
+
+Se ejecuta en una terminal de la Jetson Nano:
+
+    python3 /home/hiwonder/Desktop/mapeo_manual.py
+
+Una vez ejecutado:
+
+El sistema matará automáticamente los nodos oficiales de teleoperación de Hiwonder para tomar control exclusivo de los motores.
+El operador puede conducir el robot lentamente por los surcos usando las palancas del control. La terminal mostrará las coordenadas X e Y en tiempo real.
+Al finalizar el recorrido, el operador debe presionar cualquier botón del joystick (ej. A, B, X, Y, Start).
+El script detendrá el robot, guardará el mapa SLAM con el nombre mapa_perfecto.pgm en el escritorio y cerrará los nodos limpiamente.
