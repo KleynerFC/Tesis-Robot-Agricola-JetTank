@@ -1,10 +1,10 @@
 ## Tesis-Robot-Agricola-JetTank
-Implementación de Robot Móvil Terrestre para Evaluación de Cultivos
+Implementación de Robot Móvil Terrestre para Evaluación de Cultivos  
 Trabajo de Integración Curricular presentado para la obtención del título de Ingeniero en Electrónica y Automatización en la Universidad Estatal Península de Santa Elena (UPSE).
 
-Autor: Kleyner Fabricio Flores Cedeño
-Tutor: Ing. Junior Figueroa, M.Sc.
-Año: 2026
+Autor: Kleyner Fabricio Flores Cedeño  
+Tutor: Ing. Junior Figueroa, M.Sc.  
+Año: 2026  
 
 # Descripción del Proyecto
 
