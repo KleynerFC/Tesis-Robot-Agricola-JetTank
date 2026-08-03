@@ -1,4 +1,4 @@
-# Instrucciones de Uso: solo_navegacion.py
+# Instrucciones de Uso: codigo_final.py
 
 Este script requiere que el entorno de ROS y los sensores del robot ya estén publicando datos. No es un script standalone, forma parte del ecosistema del Hiwonder JetTank.
 
@@ -15,7 +15,7 @@ Este script requiere que el entorno de ROS y los sensores del robot ya estén pu
   ANGULO_OBJETIVO: Ángulo de giro en U empírico para compensar la inercia (Default: 175°).
   Ejecución:En el robot, este script se lanza al presionar el ícono Arrancar Tesis en la pantalla táctil. Internamente, el sistema operativo ejecuta el siguiente comando:
 
-    source /opt/ros/melodic/setup.bashsource /home/hiwonder/jettank_ws/devel/setup.bashpython3 /home/hiwonder/Desktop/solo_navegacion.py
+    source /opt/ros/melodic/setup.bashsource /home/hiwonder/jettank_ws/devel/setup.bashpython3 /home/hiwonder/Desktop/codigo_final.py
 
 # Flujo de operación:
 
