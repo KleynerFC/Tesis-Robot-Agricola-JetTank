@@ -12,7 +12,6 @@ de referencia global y utiliza un controlador Proporcional (P) para navegar
 hacia una coordenada (X, Y) en metros.
 
 REQUISITOS PREVIOS:
-
 Tener el nodo del SLAM corriendo (mediante el ícono Iniciar SLAM).
 Ejecutar el script en un terreno plano y con alta fricción (ej. baldosas, cemento o cerámica).
 Advertencia: No mover ni tocar el robot durante los primeros 40 segundos de iniciado el SLAM, 
